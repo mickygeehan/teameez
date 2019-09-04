@@ -1,0 +1,42 @@
+# Compiled source
+*.class
+*/bin/*
+
+
+# Eclipse files
+*.project
+*.classpath
+*.settings
+
+
+# Intellij files
+*.iml
+*.iws
+.idea
+
+# Packages
+*.jar
+
+# Maven build files
+target
+reports
+helm-home/
+helm-target/
+.m2/
+
+
+# ARQ tests
+
+# PMD
+*.pmd
+
+#Generated files
+*.ser
+
+# Merge files
+*.orig
+
+# Archetype support files
+install_bob.sh
+run.sh
+
