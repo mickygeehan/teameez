@@ -2,18 +2,18 @@ version: "3.1"
 
 services:
 
-  account-service:
-    build:
-      context: ./account-service
-      dockerfile: Dockerfile
-    restart: always
-    depends_on:
-      - account-service-mongo-db
-    ports:
-      - 5000:5000
+#  account-service:
+#    build:
+#      context: ./account-service
+#      dockerfile: Dockerfile
+#    restart: always
+#    depends_on:
+#      - account-service-mongo-db
+#    ports:
+#      - 5000:5000
 
 
-  ## Main services
+  ## Main web.services
   account-service-mongo-db:
     image: mongo
     restart: always
@@ -34,4 +34,4 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_DB_USERNAME}
       ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_DB_PASSWORD}
-      ME_CONFIG_MONGODB_SERVER: aocount-service-mongo-db
+      ME_CONFIG_MONGODB_SERVER: account-service-mongo-db

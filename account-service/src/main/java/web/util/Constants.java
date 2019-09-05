@@ -1,4 +1,4 @@
-package util;
+package web.util;
 
 public class Constants {
 

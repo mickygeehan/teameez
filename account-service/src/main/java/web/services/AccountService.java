@@ -1,6 +1,6 @@
-package services;
+package web.services;
 
-import model.Account;
+import web.model.Account;
 import org.springframework.stereotype.Component;
 
 @Component
