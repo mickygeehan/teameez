@@ -16,5 +16,6 @@ Quote from someone who is a manager
 Primarly I created this application to further my knowledge in the microservice architecture. Here is the list of some of the technologies I have used:
 - Spring boot
 - Docker (Docker-compose)
-- MongoDB
+- MongoDB / MongoExpress
 - Api Gateway (Not decided yet)
+- Maven
