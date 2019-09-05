@@ -1,20 +1,29 @@
 version: "3.1"
 
 services:
+
+  account-service:
+    build:
+      context: ./account-service
+      dockerfile: Dockerfile
+    restart: always
+    depends_on:
+      - account-service-mongo-db
+    ports:
+      - 5000:5000
+
+
   ## Main services
-  aocount-service-mongo-db:
+  account-service-mongo-db:
     image: mongo
     restart: always
+  # Exposing port for dev work
+    ports:
+      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
 
-  aocount-service2-mongo-db:
-    image: mongo
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USERNAME}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
 
   ## Below are the mongo express containers used to look at the databases
   mongo-express:
@@ -26,13 +35,3 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_DB_USERNAME}
       ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_DB_PASSWORD}
       ME_CONFIG_MONGODB_SERVER: aocount-service-mongo-db
-
-  mongo-express2:
-    image: mongo-express
-    restart: always
-    ports:
-      - 8082:8081
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_DB_USERNAME}
-      ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_DB_PASSWORD}
-      ME_CONFIG_MONGODB_SERVER: aocount-service2-mongo-db
