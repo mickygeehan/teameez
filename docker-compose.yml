@@ -1,0 +1,36 @@
+version: "3.1"
+
+services:
+
+  # Account Service
+  account-service:
+    build:
+      context: ./account-service
+      dockerfile: Dockerfile
+    restart: always
+    depends_on:
+      - account-service-mongo-db
+    ports:
+      - 5000:8080
+
+  # Account Service Database
+  account-service-mongo-db:
+    image: mongo
+    restart: always
+    # Exposing port for dev work // Should be removed in final
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
+
+  # Mongo Express GUI to view Account service database
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_DB_USERNAME}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_DB_PASSWORD}
+      ME_CONFIG_MONGODB_SERVER: account-service-mongo-db
