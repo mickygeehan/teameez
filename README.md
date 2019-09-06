@@ -17,5 +17,5 @@ Primarly I created this application to further my knowledge in the microservice 
 - Spring boot
 - Docker (Docker-compose)
 - MongoDB / MongoExpress
-- Api Gateway (Not decided yet)
+- Spring Cloud API Gateway
 - Maven
