@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/mickygeehan/footballmanagerapplication.svg?branch=master)](https://travis-ci.org/mickygeehan/footballmanagerapplication)
 # (Fancy Name when i can think of it)Team Manager
 A footballl team manager application that will easily allow managers to manage their teams in the most user friendly way possible.
 
