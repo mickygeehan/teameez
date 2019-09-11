@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: caller-service
+          uri: "http://httpbin.org:80"
+          predicates:
+            - Path=/get
