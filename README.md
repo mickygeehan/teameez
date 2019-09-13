@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/mickygeehan/footballmanagerapplication.svg?branch=master)](https://travis-ci.org/mickygeehan/footballmanagerapplication)
-# (Fancy Name when i can think of it)Team Manager
-A footballl team manager application that will easily allow managers to manage their teams in the most user friendly way possible.
+# TeamEez
+Teameez allows you to easily manage and gain that upper insight to all the teams you manage.
+
+By allowing you to schedule trainings, push notifications to your players, input data from matches, view statistical data from your matches, and also keep up to date with the latest sport news Teameez is your one solution for all your managerial problems.
 
 Quote from someone who is a manager
 > Managing on pen & paper just isn't enough anymore. I need this application
