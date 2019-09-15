@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mickygeehan/footballmanagerapplication.svg?branch=master)](https://travis-ci.org/mickygeehan/footballmanagerapplication)
+[![Build Status](https://travis-ci.org/mickygeehan/teameez.svg?branch=master)](https://travis-ci.org/mickygeehan/teameez)
 # TeamEez
 Teameez allows you to easily manage and gain that upper insight to all the teams you manage.
 
