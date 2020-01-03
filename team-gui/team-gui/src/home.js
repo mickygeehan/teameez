@@ -1,18 +1,18 @@
 import React from 'react';
-import {Card, Button} from 'react-bootstrap';
-
+import {Card, Container} from 'react-bootstrap';
+import SignUp from './signup'
 
 class Home extends React.Component {
     render() {
         return (
             <Card>
-                <Card.Header as="h5">Featured</Card.Header>
+                <Card.Header as="h5">Sign Up</Card.Header>
                 <Card.Body>
-                    <Card.Title>Special title treatment</Card.Title>
+                    <Card.Title>Create an account</Card.Title>
                     <Card.Text>
-                        With supporting text below as a natural lead-in to additional content.
+                        By creating an account you can create a team and or manage a team.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Container><SignUp/></Container>
                 </Card.Body>
             </Card>
         )

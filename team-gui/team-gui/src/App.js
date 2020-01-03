@@ -10,7 +10,7 @@ class App extends React.Component {
         return (
 
             <Container>
-                <Row class="row">
+                <Row>
                     <Col><Navbar/></Col>
                 </Row>
                 <Row>
