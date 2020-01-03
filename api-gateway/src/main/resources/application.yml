@@ -1,8 +1,10 @@
 spring:
+  application:
+    name: api-gateway
   cloud:
     gateway:
       routes:
-        - id: caller-service
-          uri: "http://httpbin.org:80"
+        - id: account-service
+          uri: http://account-service:8080
           predicates:
-            - Path=/get
+            - Path=/accounts/**

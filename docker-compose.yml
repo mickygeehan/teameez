@@ -2,6 +2,17 @@ version: "3.1"
 
 services:
 
+  #api-gateway
+  api-gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    restart: always
+    depends_on:
+      - account-service
+    ports:
+      - 8080:8080
+
   # Account Service
   account-service:
     build:
@@ -10,8 +21,6 @@ services:
     restart: always
     depends_on:
       - account-service-mongo-db
-    ports:
-      - 5000:8080
 
   # Account Service Database
   account-service-mongo-db:
