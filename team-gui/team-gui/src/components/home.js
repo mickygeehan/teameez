@@ -10,7 +10,7 @@ class Home extends React.Component {
                 <Card.Body>
                     <Card.Title>Create an account</Card.Title>
                     <Card.Text>
-                        By creating an account you can create a team and or manage a team.
+                        Create an account to create & manage your team or simply just join a team.
                     </Card.Text>
                     <Container><SignUp/></Container>
                 </Card.Body>
