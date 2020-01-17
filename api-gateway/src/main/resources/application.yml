@@ -8,3 +8,7 @@ spring:
           uri: http://account-service:8080
           predicates:
             - Path=/accounts/**
+        - id: team-service
+          uri: http://team-service:8080
+          predicates:
+            - Path=/teams/**

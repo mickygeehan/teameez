@@ -13,6 +13,13 @@ services:
     ports:
       - 8080:8080
 
+  # Team Service
+  team-service:
+    build:
+      context: ./team-service
+      dockerfile: Dockerfile
+    restart: always
+
   # Account Service
   account-service:
     build:
@@ -33,6 +40,14 @@ services:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
 
+  # Team Service Database
+  team-service-mongo-db:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
+
   # Mongo Express GUI to view Account service database
   mongo-express:
     image: mongo-express
@@ -42,4 +57,4 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_DB_USERNAME}
       ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_DB_PASSWORD}
-      ME_CONFIG_MONGODB_SERVER: account-service-mongo-db
+      ME_CONFIG_MONGODB_SERVER: team-service-mongo-db

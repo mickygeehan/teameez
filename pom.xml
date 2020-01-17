@@ -13,6 +13,7 @@
         <module>account-service</module>
         <module>api-gateway</module>
         <module>team-gui</module>
+        <module>team-service</module>
     </modules>
 
 
